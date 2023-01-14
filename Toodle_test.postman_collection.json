@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "5b9e3d00-cd22-477e-99ae-fa0a67e721c4",
+		"name": "Toodle_test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15317590"
+	},
+	"item": [
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "user",
+						"value": "+918408911624",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"student12@gmail.com\",\r\n    \"password\":\"Sanket@2266\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/signIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signIn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Assignment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "sanketTeacher@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTAzOTkyNTYsInJvbGVJZCI6MSwiZW1haWwiOiJzYW5rZXR0ZWFjaGVyQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsInJlZ2lzdGVyZWRBdCI6IjIwMjMtMDEtMTRUMTA6MDI6MzYuMDAwWiIsImlhdCI6MTY3MzcxMDc1NiwiZXhwIjoxNjczNzIxNTU2fQ.SQLSLeWrCmzohIBTBP8BQFM7OtK4BACPoq8i9iTCjUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Today Test\",\r\n    \"description\": \"Sanket@2266\",\r\n    \"publishTime\": \"2021-10-15T00:05:32.000Z\",\r\n    \"deadline\": \"2022-10-15T00:05:32.000Z\",\r\n    \"studentList\": [\r\n        1673710944441,\r\n        1673710946431,\r\n        1673710948610\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/assignment/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Assignment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "username",
+						"value": "sanketTeacher@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTAzOTkyNTYsInJvbGVJZCI6MSwiZW1haWwiOiJzYW5rZXR0ZWFjaGVyQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsInJlZ2lzdGVyZWRBdCI6IjIwMjMtMDEtMTRUMTA6MDI6MzYuMDAwWiIsImlhdCI6MTY3MzcxMDc1NiwiZXhwIjoxNjczNzIxNTU2fQ.SQLSLeWrCmzohIBTBP8BQFM7OtK4BACPoq8i9iTCjUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentList\": [\r\n        1673710386085\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/assignment/update/assignment_1673711103510",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"update",
+						"assignment_1673711103510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete assignment",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "username",
+						"value": "sanket@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM2Nzg4OTIwMzMsInJvbGVJZCI6MSwiZW1haWwiOiJzYW5rZXRAZ21haWwuY29tIiwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicmVnaXN0ZXJlZEF0IjoiMjAyMy0wMS0xNFQwNjo0ODoxMi4wMDBaIiwiaWF0IjoxNjczNzA4NzU3LCJleHAiOjE2NzM3MTk1NTd9.DX_B8PZ8XD-CGzAaZV5HHtzrnkoiBSdOPkeViPyV8oU",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM2Nzg4OTIwMzMsInJvbGVJZCI6MiwiZW1haWwiOiJzYW5rZXRAZ21haWwuY29tIiwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicmVnaXN0ZXJlZEF0IjoiMjAyMy0wMS0xNFQwNjo0ODoxMi4wMDBaIiwiaWF0IjoxNjczNjg0MzA3LCJleHAiOjE2NzM2OTUxMDd9.fo1fvYpwdQO077bPpUUmR91P9SH58msw18WJFadoAgI",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/assignment/delete/assignment_1673708230649",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"delete",
+						"assignment_1673708230649"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit assignment",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "username",
+						"value": "student12@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTA5NDg2MTAsInJvbGVJZCI6MiwiZW1haWwiOiJzdHVkZW50MTJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicmVnaXN0ZXJlZEF0IjoiMjAyMy0wMS0xNFQxMDoxMTo0Ni4wMDBaIiwiaWF0IjoxNjczNzEwOTQ4LCJleHAiOjE2NzM3MjE3NDh9.nFDUvh37iRnODoA4i9eI9hE-1LWEcPcr8RKonBusW-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"submission\": \"Sanket@2266\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/assignment/submit/assignment_1673711103510",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"submit",
+						"assignment_1673711103510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Feed by userType",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "sanketTeacher@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTAzOTkyNTYsInJvbGVJZCI6MSwiZW1haWwiOiJzYW5rZXR0ZWFjaGVyQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsInJlZ2lzdGVyZWRBdCI6IjIwMjMtMDEtMTRUMTA6MDI6MzYuMDAwWiIsImlhdCI6MTY3MzcxMDc1NiwiZXhwIjoxNjczNzIxNTU2fQ.SQLSLeWrCmzohIBTBP8BQFM7OtK4BACPoq8i9iTCjUE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/assignment/feed?publishedAt=SCHEDULED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "publishedAt",
+							"value": "SCHEDULED"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get feed by userType (test student)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "student12@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTA5NDg2MTAsInJvbGVJZCI6MiwiZW1haWwiOiJzdHVkZW50MTJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicmVnaXN0ZXJlZEF0IjoiMjAyMy0wMS0xNFQxMDoxMTo0Ni4wMDBaIiwiaWF0IjoxNjczNzEwOTQ4LCJleHAiOjE2NzM3MjE3NDh9.nFDUvh37iRnODoA4i9eI9hE-1LWEcPcr8RKonBusW-o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/assignment/feed",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "publishedAt",
+							"value": "ONGOING",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "OVERDUE",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Assignment (Test Teacher)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "sanketTeacher@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTAzOTkyNTYsInJvbGVJZCI6MSwiZW1haWwiOiJzYW5rZXR0ZWFjaGVyQGdtYWlsLmNvbSIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsInJlZ2lzdGVyZWRBdCI6IjIwMjMtMDEtMTRUMTA6MDI6MzYuMDAwWiIsImlhdCI6MTY3MzcxMDc1NiwiZXhwIjoxNjczNzIxNTU2fQ.SQLSLeWrCmzohIBTBP8BQFM7OtK4BACPoq8i9iTCjUE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/assignment/get/assignment_1673711103510",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"get",
+						"assignment_1673711103510"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Assignment (Test Student)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "username",
+						"value": "student12@gmail.com",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2NzM3MTA5NDg2MTAsInJvbGVJZCI6MiwiZW1haWwiOiJzdHVkZW50MTJAZ21haWwuY29tIiwiZmlyc3ROYW1lIjpudWxsLCJsYXN0TmFtZSI6bnVsbCwicmVnaXN0ZXJlZEF0IjoiMjAyMy0wMS0xNFQxMDoxMTo0Ni4wMDBaIiwiaWF0IjoxNjczNzEwOTQ4LCJleHAiOjE2NzM3MjE3NDh9.nFDUvh37iRnODoA4i9eI9hE-1LWEcPcr8RKonBusW-o",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/assignment/get/assignment_1673711103510",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"assignment",
+						"get",
+						"assignment_1673711103510"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
