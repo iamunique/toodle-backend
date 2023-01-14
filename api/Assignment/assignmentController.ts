@@ -32,7 +32,6 @@ export const updateAssignment = async (req: Request, res: Response) => {
     try {
         const assignmentId = req.params.assignmentId;
         let assignmentData = (await mySQL.GetData(`select * from assignment where assignment_id = '${assignmentId}'`))[0];
-        console.log(assignmentData)
         if (!assignmentData) throw new ServiceError(ErrorConstants.DATA_NOT_FOUND, `Invalid AssignmentId`);
 
         //updating any information for assignment

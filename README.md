@@ -1,3 +1,5 @@
+npm i ; tsc ; node .\build\index.js    - to run the project locally
+
 Teacher account  -  
     username- sanketTeacher@gmail.com
     password- anything
@@ -7,7 +9,7 @@ Other account will be created as student account
 API documentation  ->>> All apis are inside -----Toodle_test.postman_collection.json-------- (postman collection export file)
 SQL files to       ->>> All queries for table creation are inside -----toodle-backend.sql------
 ER-Diagram         ->>> ER-Diagram.jpeg
-
+Hosted URL         ->>> https://toodle-backend.onrender.com
 
 ---------------------Database info --------------------------------------- (for login and check existing data)
 Server: sql6.freemysqlhosting.net
